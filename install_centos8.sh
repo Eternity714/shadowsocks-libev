@@ -32,10 +32,3 @@ sudo ldconfig
 # 编译 shadowsocks-libev
 ./autogen.sh && ./configure && make
 sudo make install
-
-# 复制配置
-mkdir /etc/shadowsocks-libev/
-cp ./shadowsocks-libev/* /etc/shadowsocks-libev/
-
-# 复制systemd
-cp ./systemd/* /etc/systemd/system/
