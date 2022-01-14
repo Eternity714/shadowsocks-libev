@@ -5,8 +5,8 @@ Description=Shadowsocks Manager Server
 User=root
 Group=root
 Type=simple
-ExecStart=/usr/local/bin/ss-manager --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks-libev/ssmanager.json -u start
-ExecStop=/usr/local/bin/ss-manager --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks-libev/ssmanager.json -u stop
+ExecStart=/usr/local/bin/ss-manager -u --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks-libev/ssmanager.json start
+ExecStop=/usr/local/bin/ss-manager -u --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks-libev/ssmanager.json stop
 
 [Install]
 WantedBy=multi-user.target
