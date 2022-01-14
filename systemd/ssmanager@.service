@@ -5,8 +5,8 @@ Description=Shadowsocks Manager Server
 User=root
 Group=root
 Type=simple
-ExecStart=/usr/local/bin/ss-manager -u --manager-address /var/run/shadowsocks-manager.sock -c %i -a shadowsocks start
-ExecStop=/usr/local/bin/ss-manager -u --manager-address /var/run/shadowsocks-manager.sock -c %i -a shadowsocks stop
+ExecStart=/usr/local/bin/ss-manager -u --manager-address /var/run/shadowsocks-manager.sock -c %i start
+ExecStop=/usr/local/bin/ss-manager -u --manager-address /var/run/shadowsocks-manager.sock -c %i stop
 
 [Install]
 WantedBy=multi-user.target
